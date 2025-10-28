@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        color: white;
+        background-color: #000; /* fallback if image doesn't load */
+    }
+
+    .overlay {
+        background: rgba(0,0,0,0.45);
+        padding: 30px;
+        border-radius: 15px;
+        max-width: 80%;
+        position: relative;
+        z-index: 2;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+        font-family: 'Georgia', serif;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: gold;
+        text-shadow: 1px 1px 5px black;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        color: #f0e68c;
+    }
+
+    /* background image styling */
+    .background-img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        max-width: 90%;
+        max-height: 80%;
+        border-radius: 15px;
+        object-fit: contain; /* keeps image from stretching */
+        opacity: 0.7; /* subtle behind overlay */
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
+</head>
+<body>
+    <!-- crisp background image, not stretched -->
+    <img src="images/chief.jpg" alt="Background" class="background-img">
+
+    <div class="overlay">
+        <h1>Chief,</h1>
+        <p>
+            I am proud of you every single day.<br>
+            Even on the days you feel tired.<br>
+            Even when things feel heavy.<br><br>
+            You keep showing up.<br>
+            You keep fighting.<br>
+            That is strength. That is heart.<br><br>
+            Winning is woven into your very name<br><br>
+            <!-- You are destined to win.<br><br> -->
+            I believe in you always ✨❤️<br>
+            Plus you look this cute while doing  this life thing.
+        </p>
+    </div>
+</body>
+</html>
